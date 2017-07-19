@@ -1,0 +1,6 @@
+HIVE QUERIES:
+
+CREATE TABLE calendar(listing_id int,date date,available string,price float) row format delimited fields terminated by ',';
+LOAD DATA LOCAL INPATH '/home/cloudera/Downloads/Calendar.csv' OVERWRITE INTO TABLE calendar;
+SELECT * FROM calendar;
+SELECT * FROM calendar WHERE date='5/19/2017';
